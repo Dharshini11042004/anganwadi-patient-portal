@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anganwadi Patient Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Anganwadi Patient Portal</h1>
+		<p>Please select a Language</p>
+		<form method="post" action="http://localhost:80/Project/change_language.php">
+        <label for="language">Choose a language:</label>
+        <input type="radio" id="english" name="language" value="english">
+        <label for="english">English</label>
+        <input type="radio" id="tamil" name="language" value="tamil">
+        <label for="tamil">தமிழ் </label><br><br>
+        <input type="submit" value="Change Language">
+    </form>
+        <p>Please select an option:</p>
+        <a href="http://localhost:80/Project/signup.php" class="btn">User Sign Up</a>
+        <a href="signin.html" class="btn">User Sign In</a>
+		<a href="doctor_signup.html" class="btn">Doctor Signup</a>
+        <a href="doctor_signin.html" class="btn">Doctor Sign In</a><br>
+</body>
+</html>
