@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>நோயாளிகளைத் தேடுங்கள்</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+		body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #B6E8F8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #F2816E;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+  <a href="doctor_welcome_tamil.html">முகப்பு பக்கம்</a><br>
+  <a href="doctor_about_tamil.html">எங்களை பற்றி</a><br>
+  <a href="doctor_contact_tamil.html">தொடர்பு கொள்ள</a><br>
+  <a href="patient_info_tamil.html">நோயாளி பதிவு</a><br>
+  <a href="http://localhost:80/Project_Tamil/edit_medical_camp_tamil.php">முகாம் அட்டவணை</a><br>
+  <a href="http://localhost:80/Project_Tamil/edit_schemes_tamil.php">அரசாங்க திட்டங்கள் திருத்தம்</a><br>
+  <a href="edit_doctor_profile_tamil.html">மருத்துவர் சுயவிவர திருத்தம்</a><br>
+  <a href="http://localhost:80/Project/change_language.html">வெளியேறு</a><br>
+  </div>
+<div id="main">
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; திற</span>
+ <center>
+    <h2>நோயாளிகளைத் தேடுங்கள்</h2>
+    <form action="http://localhost:80/Project_Tamil/patient_info_tamil.php" method="post">
+        <label for="search">நோயாளி விவரங்களைத் தேடுங்கள்:</label>
+        <input type="text" id="search" name="search">
+        <input type="submit" value="தேடுங்கள்">
+    </form>
+ </center>
+</div>
+<footer>
+    <p>&copy; 2024 ஆன்கன்வாடி நோயாளி மையம். அனைத்து உரிமையும் பாதுகாக்கப்படுகின்றன.</p>
+</footer>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="ta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>அங்கன்வாடி பயணி இணைய முகப்பு - உள்நுழைய</title>
+    <style>
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>உள்நுழைய</h2>
+        <form action="http://localhost:80/Project_Tamil/signin_tamil.php" method="post">
+            <div class="form-group">
+                <label for="mobile">மொபைல் எண்:</label>
+                <input type="text" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="password">கடவுக்குறியீடு:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <center><button type="submit">உள்நுழைய</button></center>
+        </form><br><br>
+		<a href="http://localhost:80/Project_Tamil/signup_tamil.php">புதிய பயனர்! புதிய கணக்கை உருவாக்கவும்</a><br><br>
+		<a href="forgotpassword_tamil.html">கடவுச்சொல்லை மறந்தீர்களா?</a>
+	</div>
+</body>
+</html>

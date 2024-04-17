@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="ta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ஆங்கன்வாடி நோயாளி இணைய முகப்பு</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ஆங்கன்வாடி நோயாளி இணைய முகப்பு</h1>
+			<p>தயவுசெய்து ஒரு மொழியைத் தேர்ந்தெடுக்கவும்</p>
+		<form method="post" action="http://localhost:80/Project/change_language.php">
+        <label for="language">ஒரு மொழியைத் தேர்ந்தெடுக்கவும்:</label>
+        <input type="radio" id="english" name="language" value="english">
+        <label for="english">English</label>
+        <input type="radio" id="tamil" name="language" value="tamil">
+        <label for="tamil">தமிழ் </label><br><br>
+        <input type="submit" value="Change Language">
+    </form>
+        <p>தயவுசெய்து ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்:</p>
+        <a href="http://localhost:80/Project_Tamil/signup_tamil.php" class="btn">பயனர் பதிவு</a>
+        <a href="signin_tamil.html" class="btn">பயனர் உள்நுழை</a>
+		<a href="doctor_signup_tamil.html" class="btn">மருத்துவர் பதிவு</a>
+        <a href="doctor_signin_tamil.html" class="btn">மருத்துவர் உள்நுழை</a><br>
+    </div>
+</body>
+</html>

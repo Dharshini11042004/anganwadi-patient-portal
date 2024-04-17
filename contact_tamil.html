@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="ta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #B6E8F8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #F2816E;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+  <a href="user_welcome_tamil.html">முகப்பு பக்கம்</a><br>
+  <a href="about_tamil.html">எங்களை பற்றி</a><br>
+  <a href="contact_tamil.html">தொடர்பு கொள்ள</a><br>
+  <a href="http://localhost:80/Project_Tamil/doctor_info_tamil.php">மருத்துவ நிபுணர் தகவல்</a><br>
+  <a href="http://localhost:80/Project_Tamil/schemes_tamil.php">அரசு திட்டங்கள்</a><br>
+  <a href="http://localhost:80/Project_Tamil/user_edit_profile_tamil.php">சுயவிவர திருத்தம்</a><br>
+  <a href="http://localhost:80/Project_Tamil/check_medical_camp_tamil.php">மருத்துவ முகாம் தகவல்</a><br>
+  <a href="http://localhost:80/Project/change_language.html">வெளியேறு</a><br>
+</div>
+
+<div id="main">
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; திற</span>
+ <center>
+ <h2>எங்களைத் தொடர்பு கொள்ள</h2>
+ </center>
+<p><b>தொலைபேசி:</b> (044) 2454 0146 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (044) 2454 1771 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (044) 2454 0974 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (044) 2454 0772</p>
+<br><br><p><b>முகவரி:</b> #1, டாக்டர் எம்.ஜி.ஆர் சாலை, தரமணி, சென்னை - 600 113.<br></p>
+<br><br><p><b>மின்னஞ்சல்:</b> icds.tn@nic.in <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; directornicds@gmail.com <br></p>
+</div>
+<footer>
+        <p>&copy; 2024 ஆன்கன்வாடி நோயாளி மையம். அனைத்து உரிமையும் பாதுகாக்கப்படுகின்றன..</p>
+    </footer>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>

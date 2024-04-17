@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>மருத்துவ நிபுணர் பதிவுசெய்ய</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>மருத்துவ நிபுணர் பதிவுசெய்ய</h2>
+        <form action="http://localhost:80/Project_Tamil/doctor_signup_tamil.php" method="post">
+            <div class="form-group">
+                <label for="doctor_id">மருத்துவர் ஐடி:</label>
+                <input type="text" id="doctor_id" name="doctor_id" required>
+            </div>
+            <div class="form-group">
+                <label for="name">பெயர்:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">மின்னஞ்சல் முகவரி:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">மொபைல்:</label>
+                <input type="text" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="password">கடவுச்சொல்:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">சிறப்பு:</label>
+                <input type="text" id="specialization" name="specialization" required>
+            </div>
+            <button type="submit">பதிவு செய்</button>
+        </form>
+        <br>
+        <a href="doctor_signin_tamil.html">இருக்கும் பயனர்!</a>
+    </div>
+</body>
+</html>

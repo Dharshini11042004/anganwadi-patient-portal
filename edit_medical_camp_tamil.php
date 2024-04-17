@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>மருத்துவ முகாமை திருத்தவும்</title>
+    <style>
+         body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #B6E8F8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #F2816E;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+  <a href="doctor_welcome_tamil.html">முகப்பு பக்கம்</a><br>
+  <a href="doctor_about_tamil.html">எங்களை பற்றி</a><br>
+  <a href="doctor_contact_tamil.html">தொடர்பு கொள்ள</a><br>
+  <a href="patient_info_tamil.html">நோயாளி பதிவு</a><br>
+  <a href="http://localhost:80/Project_Tamil/edit_medical_camp_tamil.php">முகாம் அட்டவணை</a><br>
+  <a href="http://localhost:80/Project_Tamil/edit_schemes_tamil.php">அரசாங்க திட்டங்கள் திருத்தம்</a><br>
+  <a href="edit_doctor_profile_tamil.html">மருத்துவர் சுயவிவர திருத்தம்</a><br>
+  <a href="http://localhost:80/Project/change_language.html">வெளியேறு</a><br>
+</div>
+
+<div id="main">
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; திற</span>
+ <center>
+    <h2>மருத்துவ முகாமை திருத்தவும்</h2>
+</center>    
+    <!-- புதிய மருத்துவ முகாமை சேர்க்க படிவம் -->
+    <form action="process_medical_camp_tamil.php" method="post">
+        <label for="venue">இடம்:</label>
+        <input type="text" id="venue" name="venue" required><br><br>
+        
+        <label for="date">தேதி:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="time">நேரம்:</label>
+        <input type="time" id="time" name="time" required><br><br>
+        
+        <label for="landmark">குறியீடு:</label>
+        <input type="text" id="landmark" name="landmark" required><br><br>
+        
+        <input type="submit" value="மருத்துவ முகாமை சேர்க்கவும்">
+    </form>
+
+    <hr>
+
+    <!-- தற்போதைய மருத்துவ முகாமை விவரங்கள் காட்ட -->
+    <h3>தற்போதைய மருத்துவ முகாம்கள்:</h3>
+    <ul>
+        <?php
+        // தரவுத்தொகுப்பு இணைப்பு அளவுருக்கள்
+        $servername = "localhost";
+        $username = "root"; // உங்கள் MySQL பயனர் பெயர்
+        $password = ""; // உங்கள் MySQL கடவுச்சொல்
+        $dbname = "anganwadi";
+
+        // இணைப்பை உருவாக்கவும்
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // இணைப்பு சரிபார்க்கவும்
+        if ($conn->connect_error) {
+            die("இணைப்பு தோல்வியடைந்தது: " . $conn->connect_error);
+        }
+
+        // தரவுத்தொகுப்பில் இருந்து தற்போது உள்ள மருத்துவ முகாமை விவரங்களைப் பெறவும்
+        $sql = "SELECT * FROM medical_camp";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<li>இடம்: " . $row['venue'] . ", தேதி: " . $row['date'] . ", நேரம்: " . $row['time'] . ", குறியீடு: " . $row['landmark'] . "</li>";
+            }
+        } else {
+            echo "<li>மருத்துவ முகாம்கள் கிடைக்கவில்லை</li>";
+        }
+
+        $conn->close();
+        ?>
+    </ul>
+	</div>
+ <footer>
+        <p>&copy; 2024 ஆன்கன்வாடி நோயாளி மையம். அனைத்து உரிமையும் பாதுகாக்கப்படுகின்றன.</p>
+    </footer>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>

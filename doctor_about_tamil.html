@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="ta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #B6E8F8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #F2816E;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+  <a href="doctor_welcome_tamil.html">முகப்பு பக்கம்</a><br>
+  <a href="doctor_about_tamil.html">எங்களை பற்றி</a><br>
+  <a href="doctor_contact_tamil.html">தொடர்பு கொள்ள</a><br>
+  <a href="patient_info_tamil.html">நோயாளி பதிவு</a><br>
+  <a href="http://localhost:80/Project_Tamil/edit_medical_camp_tamil.php">முகாம் அட்டவணை</a><br>
+  <a href="http://localhost:80/Project_Tamil/edit_schemes_tamil.php">அரசாங்க திட்டங்கள் திருத்தம்</a><br>
+  <a href="edit_doctor_profile_tamil.html">மருத்துவர் சுயவிவர திருத்தம்</a><br>
+  <a href="http://localhost:80/Project/change_language.html">வெளியேறு</a><br>
+</div>
+
+<div id="main">
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; திற</span>
+ <center>
+ <h2> எங்களைப் பற்றி</h2>
+ </center>
+<div class="container">
+        <section>
+            <h2>எங்கள் நோக்கங்கள்</h2>
+            <p>அங்கன்வாடி நோயாளி இணையதளம் 6 வயது கீழ் உள்ள குழந்தைகள் மற்றும் கர்ப்பிணி மற்றும் தாய்ப்பால் கொடுப்பவர்களின் ஆரோக்கியத்தை Tamil Nadu-ல் முழுமையாக நலன்களை வழங்குவதே எங்கள் நோக்கமாகும். நம் இலக்கு குழந்தைகள் மற்றும் தாய்களின் நலனை உறுதி செய்வதில் உள்ளது.</p>
+        </section>
+
+        <section>
+            <h2>எங்கள் பார்வை</h2>
+            <p>தமிழ்நாட்டில் ஒவ்வொரு குழந்தைக்கும் மற்றும் தாய்க்கு ஒரு ஆரோக்கியமான மற்றும் பிரகாசமான எதிர்காலத்தை உருவாக்குவதே எங்கள் பார்வை. குடும்பங்களுக்கு அறிவியல் மற்றும் மிக முக்கியமான ஆரோக்கிய சேவைகளை பயன்படுத்த அனுமதிப்பதன் மூலம், ஒவ்வொரு மனிதனும் வளர்ந்துவிடுவதற்கான வாய்ப்பை பெறுகிறோம்.</p>
+        </section>
+
+        <section>
+            <h2>பங்கெடுக்கவும்</h2>
+            <p>குடும்ப ஆரோக்கியத்தை மேம்படுத்த ஆர்வமாக இருந்தால், அங்கன்வாடி மையங்களில் ஒன்று பணியாற்றுதல் அல்லது நிதி உதவிகளை வழங்குவதன் மூலம் எங்கள் திட்டங்களை ஆதரிக்கலாம். ஒவ்வொருவரின் வாழ்க்கையிலும், குறிப்பாக குழந்தைகள் மற்றும் தாய்களின் வாழ்க்கையில் ஒரு மாற்றத்தை காணலாம்.</p>
+        </section>
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2024 ஆன்கன்வாடி நோயாளி மையம். அனைத்து உரிமையும் பாதுகாக்கப்படுகின்றன.</p>
+    </footer>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+   
+</body>
+</html>
